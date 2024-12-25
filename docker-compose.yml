@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  short-url:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    container_name: short-url
+    environment:
+      BASIC_URl: localhost:5481
+      BASIC_PREFIX: http://
+    ports:
+      - "5481:80"
